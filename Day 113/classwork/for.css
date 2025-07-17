@@ -1,0 +1,15 @@
+:root{
+    --d-background-color:blue;
+    --d-color:white;
+    --d-margin:20px;
+    --d-opacity: 50%;
+}
+
+
+.child{
+    background-color: var(--d-background-color);
+    color: var(--d-color);
+    margin: var(--d-margin);
+    opacity: var(--d-opacity);
+
+}

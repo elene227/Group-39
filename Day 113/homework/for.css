@@ -1,0 +1,38 @@
+:root{
+    --color: #ffffff;
+    --bkg-col: #00007d; 
+    
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.b1{
+    color: var(--color);
+    background-color: var(--bkg-col);
+    border: none;
+    padding: 20px;
+    box-shadow: 2px 2px 2px rgb(55, 55, 110);
+}
+
+
+.b2{
+    color: var(--color);
+    background-color: var(--bkg-col);
+    border: none;
+    padding: 20px;
+    box-shadow: 5px 4px 2px rgb(55, 55, 110);
+}
+
+.div{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    padding: 200px;
+}

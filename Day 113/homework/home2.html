@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        :root{
+            --bg-color: #ffffff;
+            --text-color: #ff0505;
+            --dark-mode: #000000;
+            --white-mode: #ffffff;
+
+
+        }
+        .light-theme{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .themeButton{
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            border: solid rgba(228, 0, 0, 0.402) 4px;
+            cursor: pointer;
+            transition: 0.9s;
+            border-radius: 10px;
+            padding: 10px;
+            font-weight: 600;
+        }
+        .themeButton:hover{
+             color: #850303;
+             background-color: rgb(255, 218, 218);
+             border: rgb(228, 0, 0);
+        }
+        .dark{
+            background-color: var(--dark-mode);
+            color: var(--white-mode);
+        }
+        .light{
+            background-color: var(--white-mode);
+            color: var(--dark-mode);
+        }
+    </style>
+<body class="light-theme" id="lighttheme">
+    
+    <h1>Hallo!</h1>
+    <p>welcome to [...] site</p>
+
+    <button id="themeChanger" class="themeButton">Click to change theme</button>
+
+    <script>
+        const lighttheme = document.getElementById("lighttheme")
+        const themeChanger = document.getElementById("themeChanger")
+
+       themeChanger.addEventListener('click', () => {
+        if (lighttheme.classList.contains("light")){
+            lighttheme.classList.remove("light")
+            lighttheme.classList.add("dark")
+            themeChanger.textContent = 'switch back to light'
+            
+        }else{
+            lighttheme.classList.remove("dark")
+            lighttheme.classList.add("light")
+            themeChanger.textContent = 'switch back to dark'
+
+        }
+
+
+       })
+    </script>
+</body>
+</html>
